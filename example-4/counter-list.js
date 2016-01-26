@@ -2,14 +2,14 @@ import {button, div} from '@cycle/dom'
 import Counter from './counter'
 import {Observable} from 'rx'
 import isolate from '@cycle/isolate'
-import {hotVTree} from '../util'
+import {hotDOM} from '../util'
 
 function intent ({DOM}) {
   return {
     add$: DOM
       .select('.add')
       .events('click')
-      .map(() => hotVTree(isolate(Counter)({DOM})))
+      .map(() => hotDOM(isolate(Counter)({DOM})))
   }
 }
 
