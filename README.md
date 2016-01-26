@@ -3,6 +3,7 @@
 ## Run Example
 
 ```
+npm install
 cd example-[n]
 npm start
 ```
